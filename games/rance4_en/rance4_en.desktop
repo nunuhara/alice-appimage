@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Rance IV
+Exec=xsystem35
+Type=Application
+Categories=Game;
+Path=/usr/share/games/rance4_en
+Icon=rance4_en

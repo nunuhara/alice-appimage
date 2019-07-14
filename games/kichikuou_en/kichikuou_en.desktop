@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Kichikuou Rance
+Exec=xsystem35
+Type=Application
+Categories=Game;
+Path=/usr/share/games/kichikuou_en
+Icon=kichikuou_en

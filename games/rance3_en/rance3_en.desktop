@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=Rance III
+Exec=xsystem35
+Type=Application
+Categories=Game;
+Path=/usr/share/games/rance3_en
+Icon=rance3_en
