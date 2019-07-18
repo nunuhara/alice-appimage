@@ -1,4 +1,4 @@
 *.tar.gz
 *.AppImage
 games/*/gamedata
-xsystem35-sdl2
+/xsystem35-sdl2

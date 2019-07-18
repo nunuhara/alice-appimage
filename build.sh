@@ -67,6 +67,8 @@ trap cleanup EXIT
 # switch to build dir
 pushd "${BUILD_DIR}"
 
+cp -r "${REPO_ROOT}/fsroot" AppDir
+
 # configure build files with Autotools
 "${REPO_ROOT}/xsystem35-sdl2/configure" --enable-cdrom=mp3 --enable-midi=sdl --enable-pkg-config --enable-debug --enable-sdl --disable-shared --with-ft-exec-prefix="${REPO_ROOT}/ft-config"
 
@@ -79,12 +81,6 @@ if [ "${GAME}" != "xsystem35-sdl2" ]; then
     mkdir AppDir/usr/share/games
     cp -r ${GAMEDIR}/gamedata AppDir/usr/share/games/${GAME}
 fi
-
-# install additional licenses
-mkdir -p AppDir/usr/share/doc/alicesoft
-cp ${REPO_ROOT}/licenses/alicesoft.txt AppDir/usr/share/doc/alicesoft/copyright
-mkdir -p AppDir/usr/share/doc/xsystem35-sdl2
-cp ${REPO_ROOT}/xsystem35-sdl2/COPYING AppDir/usr/share/doc/xsystem35-sdl2/copyright
 
 if [ "${GAME}" != xsystem35-sdl2 ]; then
     APPRUN="--custom-apprun=${GAMEDIR}/AppRun"
