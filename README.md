@@ -15,7 +15,7 @@ section below) and a file `<game>.AppImage` should be created in the current
 directory.
 
 If you want to build an AppImage for a game not listed below, you can run
-`./mkgame` <dirname> <gamename> <aldloc>`, where:
+`./mkgame <dirname> <gamename> <aldloc>`, where:
 
 * `<dirname>` is the name of the directory to create in `games/`, and will be
 the name passed to `build.sh`
