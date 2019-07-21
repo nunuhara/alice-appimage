@@ -35,7 +35,7 @@ fi
 if [ ${GAME} != "xsystem35-sdl2" -a ! -d "${GAMEDIR}/gamedata" ]; then
     echo "Game data for ${GAME} not found; downloading from internet..."
     mkdir "${GAMEDIR}/gamedata"
-    curl -s "http://www.haniwa.website/games/${GAME}.tar.gz" | tar -C "${GAMEDIR}/gamedata" -xzf -
+    curl -s "https://haniwa.website/games/${GAME}.tar.gz" | tar -C "${GAMEDIR}/gamedata" -xzf -
     if [ $? -ne 0 ]; then
         echo "ERROR: Failed to download game data for ${GAME}"
         exit 1
@@ -69,12 +69,14 @@ pushd "${BUILD_DIR}"
 
 cp -r "${REPO_ROOT}/fsroot" AppDir
 
-# configure build files with Autotools
-"${REPO_ROOT}/xsystem35-sdl2/configure" --enable-cdrom=mp3 --enable-midi=sdl --enable-pkg-config --enable-debug --enable-sdl --disable-shared --with-ft-exec-prefix="${REPO_ROOT}/ft-config"
+# configure build files with CMAKE
+mkdir build
+cd build
+cmake -DCMAKE_BUILD_TYPE=Debug -DENABLE_X11=NO -DCMAKE_INSTALL_PREFIX=/usr "${REPO_ROOT}/xsystem35-sdl2/"
 
 # build xsystem35 and install files into AppDir
 make -j$(nproc)
-make install DESTDIR="$(pwd)/AppDir" prefix=/usr
+make DESTDIR="$(pwd)/AppDir" install
 
 # install game files
 if [ "${GAME}" != "xsystem35-sdl2" ]; then
