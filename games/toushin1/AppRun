@@ -1,0 +1,10 @@
+#!/bin/sh
+
+# Ensure save directory exists
+mkdir -p "${HOME}/.xsys35/saves/闘神都市"
+
+# cd to game directory and run xsystem35
+HERE="$(dirname "$(readlink -f "${0}")")"
+export SDL_SOUNDFONTS="${HERE}/usr/share/games/toushin1/TimGM6mb.sf2"
+cd "${HERE}/usr/share/games/toushin1"
+exec "${HERE}/usr/bin/xsystem35" "$@"

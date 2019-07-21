@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=学園KING
+Exec=xsystem35
+Type=Application
+Categories=Game;
+Path=/usr/share/games/gakuen
+Icon=gakuen

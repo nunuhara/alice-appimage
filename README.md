@@ -30,6 +30,7 @@ build the AppImage.
 
 Games supported so far:
 
+* Gakuen KING (JP) (name: gakuen)
 * Rance (EN+JP) (name: rance1_en/rance1)
 * Rance II (JP) (name: rance2)
 * Rance III (EN+JP) (name: rance3_en/rance3)

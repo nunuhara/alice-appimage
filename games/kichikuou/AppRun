@@ -1,0 +1,9 @@
+#!/bin/sh
+
+# Ensure save directory exists
+mkdir -p "${HOME}/.xsys35/saves/虐畜王"
+
+# cd to game directory and run xsystem35
+HERE="$(dirname "$(readlink -f "${0}")")"
+cd "${HERE}/usr/share/games/kichikuou"
+exec "${HERE}/usr/bin/xsystem35" "$@"

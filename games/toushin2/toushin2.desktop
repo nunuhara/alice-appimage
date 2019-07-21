@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=闘神都市２
+Exec=xsystem35
+Type=Application
+Categories=Game;
+Path=/usr/share/games/toushin2
+Icon=toushin2
