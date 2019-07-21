@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=%GAMENAME%
+Exec=xsystem35
+Type=Application
+Categories=Game;
+Path=/usr/share/games/%DIRNAME%
+Icon=%DIRNAME%

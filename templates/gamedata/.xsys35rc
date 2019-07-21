@@ -1,0 +1,11 @@
+# Font Configuration
+font_device: ttf
+ttfont_mincho: mincho.otf
+ttfont_gothic: MTLc3m.ttf
+antialias: Yes
+
+# CD-ROM
+cdrom_device: playlist
+
+# Misc.
+no_shm: Yes
