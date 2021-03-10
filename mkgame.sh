@@ -71,6 +71,12 @@ fi
 # copy .ALD files
 find "${ALDLOC}" -iname "*ald" -type f -exec cp '{}' "${GAMEDIR}/gamedata/" ";"
 
+# copy .ain files
+find "${ALDLOC}" -iname "*ain" -type f -exec cp '{}' "${GAMEDIR}/gamedata/" ";"
+
+# copy .ini files
+find "${ALDLOC}" -iname "*ini" -type f -exec cp '{}' "${GAMEDIR}/gamedata/" ";"
+
 # generate one line of a gameresource file
 grline () {
     find "${GAMEDIR}/gamedata" -iname "*$2" -printf "$1 %f\n"
@@ -95,4 +101,5 @@ done
 for c in {A..J}; do
     echo "Save${c} ~/.xsys35/saves/${GAMENAME}/${GAMENAME}${c}.ASD" >> "${GAMEDIR}/gamedata/xsystem35.gr"
 done
+grline "Ain" "ain" >> "${GAMEDIR}/gamedata/xsystem35.gr"
 
