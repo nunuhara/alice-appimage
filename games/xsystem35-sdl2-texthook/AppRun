@@ -1,0 +1,6 @@
+#!/bin/sh
+
+# cd to game directory and run xsystem35
+HERE="$(dirname "$(readlink -f "${0}")")"
+#exec "${HERE}/usr/bin/xsystem35" "$@"
+"${HERE}/usr/bin/xsystem35" "$@" 2> /dev/null | "${HERE}/usr/bin/texthooker.sh"
